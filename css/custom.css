@@ -1,0 +1,10 @@
+/* Custom Styling */
+
+body {
+    width: 98%;
+    margin: 0 auto;
+}
+
+label {
+    margin-right: 12px;
+}
