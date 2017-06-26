@@ -4,9 +4,17 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600,600i,700,700i');
 
+/* Typeface for Body Text */
+
+@import url('https://fonts.googleapis.com/css?family=Spectral:400,400i,600,600i');
+
 body {
     width: 98%;
     margin: 0 auto;
+    font-family: 'Spectral', 'Times', serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
 }
 
 main {
