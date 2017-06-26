@@ -21,8 +21,20 @@ main {
     margin-top: 0;
 }
 
-main .panel {
-    margin-top: -15px;
+.panel {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #888888;
+}
+
+.panel-heading {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #c0c0c0;
+}
+
+.panel-heading h2 {
+    color: #ffffff;
 }
 
 h1, h2, h3,
@@ -40,4 +52,8 @@ h2 {
 
 label {
     margin-right: 12px;
+}
+
+.article-head {
+    font-family: 'Monteserrat', 'Helvetica', sans-serif;
 }

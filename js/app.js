@@ -30,7 +30,10 @@ $(document).ready(function()    {
 
         for (var i = 0; i < response.data.feed.length; i ++)  {
 
-            $('main').append('<article><p>' + feed[i].content.description + '</p></article>');
+            $('.panel-body .row .col-md-6').append()
+
+            $('.panel-body .row .col-md-6').append('<p>' + feed[i].content.description +
+                '</p></article>');
 
         }
 
