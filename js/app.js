@@ -30,10 +30,21 @@ $(document).ready(function()    {
 
         for (var i = 0; i < response.data.feed.length; i ++)  {
 
-            $('.panel-body .row .col-md-6').append()
+            var newRow = $('.panel-body').append('<div class="row"></row>');
 
-            $('.panel-body .row .col-md-6').append('<p>' + feed[i].content.description +
-                '</p></article>');
+            newRow.append('<div class="col-md-6" id="titleDesc"></div>');
+
+            newRow.append('<div class="col-md-2" id="publication"></div>');
+
+            $('#titleDesc').append('<h3 class="text-muted article-head">' +
+                feed[i].content.title + '</h3>');
+
+            $('#titleDesc').append('<p>' + feed[i].content.description + '</p>');
+
+            $('#publication').append('<h3 class="text-muted article-head">' +
+                feed[i].content.domain_name + '</h3>');
+
+            console.log(newRow.val());
 
         }
 
