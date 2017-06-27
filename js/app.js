@@ -42,9 +42,13 @@ $(document).ready(function()    {
                 feed[i].content.title +  '</h3>' +
                 '<p>' + feed[i].content.description + '</p>' + '</div>');
 
-            var pubName = newRow.append('<div class="col-md-3">' +
+            var pubName = newRow.append('<div class="col-md-2">' +
                 '<h3 class="article-head text-muted">' +
                 feed[i].content.domain_name + '</h3>' + '</div>');
+
+            var articleLink = newRow.append('<div class="col-md-2">' +
+                '<a href="#" class="articleLink">View Article</a>' +
+                '</div>');
 
 
             console.log(newRow.val());

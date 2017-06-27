@@ -41,6 +41,9 @@ main {
     font-size: 18px;
 }
 
+.panel-body {
+    margin-top: -15px;
+}
 .row {
     border-bottom: 1px dotted #888888;
     margin-bottom: 6px;
@@ -71,4 +74,9 @@ label {
     font-family: 'Monteserrat', 'Helvetica', sans-serif;
     font-size: 16px;
     font-weight: 600;
+}
+
+.articleLink {
+    display: inline-block;
+    margin-top: 15px;
 }
