@@ -2,9 +2,9 @@
 //
 // Robert Hieger
 //
-// In-Class Lab
+// Feedr Application
 //
-// June 21, 2017
+// June 27, 2017
 
 $(document).ready(function()    {
 
@@ -29,28 +29,31 @@ $(document).ready(function()    {
         var feed = response.data.feed;
 
         for (var i = 0; i < response.data.feed.length; i ++)  {
-
+                                                                                  
+            
             var newRow = $('.panel-body').append('<div class="row"></row>');
 
-            newRow.append('<div class="col-md-6" id="titleDesc"></div>');
+            var photo = newRow.append('<div class="col-md-4">' +
+                '<img src="' +feed[i].content.media.images[1].url + '" />' +
+                '</div>');
 
-            newRow.append('<div class="col-md-2" id="publication"></div>');
+            var titleDesc = newRow.append('<div class="col-md-4">' +
+                '<h3 class="article-head text-muted">' +
+                feed[i].content.title +  '</h3>' +
+                '<p>' + feed[i].content.description + '</p>' + '</div>');
 
-            $('#titleDesc').append('<h3 class="text-muted article-head">' +
-                feed[i].content.title + '</h3>');
+            var pubName = newRow.append('<div class="col-md-3">' +
+                '<h3 class="article-head text-muted">' +
+                feed[i].content.domain_name + '</h3>' + '</div>');
 
-            $('#titleDesc').append('<p>' + feed[i].content.description + '</p>');
-
-            $('#publication').append('<h3 class="text-muted article-head">' +
-                feed[i].content.domain_name + '</h3>');
 
             console.log(newRow.val());
 
-        }
+        }   // end for
 
         console.log(feed);
 
-    });
+    }); // end $.get(diggEndPoint, function())
 
 
 }); // end $(document).ready()
