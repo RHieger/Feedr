@@ -21,9 +21,14 @@ main {
     margin-top: 0;
 }
 
+header {
+    width: 100%;
+    position: fixed;
+}
+
 .panel {
     width: 100%;
-    margin-top: -15px;
+    margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #888888;
@@ -31,9 +36,12 @@ main {
 
 .panel-heading {
     width: 100%;
+    position: fixed;
     margin-left: auto;
     margin-right: auto;
-    background-color: #c0c0c0;
+    background-color: blue;
+    opacity: 1;
+    z-index: 99;
 }
 
 .panel-heading h2 {
@@ -42,7 +50,8 @@ main {
 }
 
 .panel-body {
-    margin-top: -15px;
+    margin-top: 50px;
+    z-index: 99;
 }
 .row {
     border-bottom: 1px dotted #888888;
@@ -51,6 +60,7 @@ main {
 
 img {
     width: 100%;
+    z-index: -1;
 }
 
 h1, h2, h3,
