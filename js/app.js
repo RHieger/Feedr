@@ -52,16 +52,8 @@ $(document).ready(function()    {
 
             var articleLink = newRow.append('<div class="col-md-2">' +
                 '<a href="' + feed[i].content.original_url + '"' +
-                'class="articleLink">View Article</a>' + '</div>');
-
-            $(articleLink, 'a href').on('click', function(event)    {
-
-                event.preventDefault();
-
-                var articleWindow = $(this).window.open(feed[i].content.original_url,
-                    '_blank', 'article-window', 'width=500, height=300');
-
-            }); // end $(articleLink, 'a href')
+                'class="articleLink" target="_blank">' +
+                'View Article</a>' + '</div>');
 
         }   // end for
 
