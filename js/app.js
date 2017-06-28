@@ -8,11 +8,18 @@
 
 $(document).ready(function()    {
 
-    // console.log('Document Loaded!');
+    // Assemble API Endpoint.
+
+    // Proxy URL:
+
+    var proxy = 'https://accesscontrolalloworiginall.herokuapp.com/';
+
+
+    // URL for Digg API Endpoint:
 
     var diggURL = 'http://digg.com/api/news/popular.json';
 
-    var proxy = 'https://accesscontrolalloworiginall.herokuapp.com/';
+    // Fully Assembled Digg Endpoint:
 
     var diggEndPoint = proxy + diggURL;
 
@@ -22,9 +29,6 @@ $(document).ready(function()    {
 
     $.get(diggEndPoint, function(response)   {
 
-        // Log the response to the console.
-
-        console.log(response);
 
         var feed = response.data.feed;
 
@@ -47,11 +51,17 @@ $(document).ready(function()    {
                 feed[i].content.domain_name + '</h3>' + '</div>');
 
             var articleLink = newRow.append('<div class="col-md-2">' +
-                '<a href="#" class="articleLink">View Article</a>' +
-                '</div>');
+                '<a href="' + feed[i].content.original_url + '"' +
+                'class="articleLink">View Article</a>' + '</div>');
 
+            $(articleLink, 'a href').on('click', function(event)    {
 
-            console.log(newRow.val());
+                event.preventDefault();
+
+                var articleWindow = $(this).window.open(feed[i].content.original_url,
+                    '_blank', 'article-window', 'width=500, height=300');
+
+            }); // end $(articleLink, 'a href')
 
         }   // end for
 
