@@ -18,17 +18,22 @@ body {
 }
 
 main {
-    margin-top: 0;
+    margin-top: 150px;
 }
 
 header {
     width: 100%;
+    margin-top: -135px;
+    margin-bottom: -200px;
     position: fixed;
+    opacity: 1;
+    z-index: 99;
 }
 
 .panel {
     width: 100%;
-    margin-top: 150px;
+    clear: both;
+    margin-top: -15px;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #888888;
@@ -37,8 +42,6 @@ header {
 .panel-heading {
     width: 100%;
     position: fixed;
-    margin-left: auto;
-    margin-right: auto;
     background-color: blue;
     opacity: 1;
     z-index: 99;
@@ -51,7 +54,7 @@ header {
 
 .panel-body {
     margin-top: 50px;
-    z-index: 99;
+    z-index: -1;
 }
 .row {
     border-bottom: 1px dotted #888888;
